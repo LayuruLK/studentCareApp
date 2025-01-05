@@ -1,3 +1,5 @@
+import { Image, ScrollView, StyleSheet, View } from "react-native";
+import { Button, Divider, PaperProvider, Text, TextInput } from "react-native-paper";
 export default function Profile() {
     return(
         <PaperProvider>
