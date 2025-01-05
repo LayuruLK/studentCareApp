@@ -70,6 +70,40 @@ export default function Subjects() {
           </Button>
         </View>
 
+        <Divider style={styles.divider} />
+
+        <View style={styles.courseListContainer}>
+          <Text style={styles.courseListTitle}>
+            Subjects and Marks Information:
+          </Text>
+          {courses.length > 0 ? (
+            <List.Section>
+              {courses.map((course, index) => (
+                <List.Item
+                  key={index}
+                  title={course.subject}
+                  description={`Marks: ${course.marks}`}
+                  left={(props) => <List.Icon {...props} icon="book" />}
+                />
+              ))}
+            </List.Section>
+          ) : (
+            <Text>No subjects added yet.</Text>
+          )}
+        </View>
+
+        <Divider style={styles.divider} />
+
+        {average !== null && (
+          <View style={styles.averageContainer}>
+            <Text style={styles.averageText}>Average Marks: {average}</Text>
+          </View>
+        )}
+
+        <View style={styles.header}>
+          <Text style={styles.headerText}>UoV @ 2025</Text>
+        </View>
+
         </ScrollView>  
       </PaperProvider>
     );
