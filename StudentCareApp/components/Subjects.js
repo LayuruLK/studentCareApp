@@ -23,6 +23,13 @@ export default function Subjects() {
         }
       };
     
+      const calculateAverage = () => {
+        if (courses.length > 0) {
+          const totalMarks = courses.reduce((sum, course) => sum + course.marks, 0);
+          const avg = totalMarks / courses.length;
+          setAverage(avg.toFixed(2));
+        }
+      };
     
     return(
         <PaperProvider>
