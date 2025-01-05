@@ -13,6 +13,17 @@ export default function Profile() {
                style={styles.image}
              />
            </View> 
+
+           <View style={styles.studentInfoContainer}>
+          <Image
+            style={styles.profilePicContainer}
+            source={studentdata.profile_pic}
+          ></Image>
+          <Text style={styles.studentName}>Name:{studentdata.username}</Text>
+          <Text style={styles.studentDetails}>Age:{studentdata.age}</Text>
+          <Text style={styles.studentDetails}>Gender:{studentdata.gender}</Text>
+        </View>
+        
          </ScrollView> 
       </PaperProvider>
     );
