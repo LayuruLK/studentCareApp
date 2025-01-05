@@ -33,6 +33,20 @@ export default function Login() {
             style={styles.image}
           />
         </View>
+        <View style={styles.container}>
+          <Text style={styles.loginText}>Student Login</Text>
+          <Divider />
+        </View>
+
+        <View style={styles.formcontainer}>
+          <TextInput label="Username" mode="outlined" onChangeText={setName} />
+          <TextInput
+            label="Password"
+            mode="outlined"
+            secureTextEntry
+            onChangeText={setPassword}
+          />
+          </View>
       </ScrollView>  
     </PaperProvider>
     );
