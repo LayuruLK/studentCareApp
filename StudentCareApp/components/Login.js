@@ -56,3 +56,39 @@ export default function Login() {
     </PaperProvider>
     );
 }
+
+const styles = StyleSheet.create({
+    container: { alignItems: "center" },
+    header: {
+      width: "100%",
+      height: 100,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: "#8b008b",
+    },
+    headerText: {
+      fontSize: 24,
+      color: "#fff",
+      backgroundColor: "#8b008b",
+      fontWeight: "bold",
+    },
+    image: {
+      width: "60%",
+      height: 100,
+      resizeMode: "contain",
+      marginTop: 5,
+    },
+    imagecontain: { alignItems: "center" },
+    loginText: {
+      fontSize: 40,
+      fontWeight: "bold",
+    },
+    formcontainer: {
+      paddingHorizontal: 20,
+      marginTop: 20,
+    },
+    buttoncontainer: {
+      paddingTop: 20,
+    },
+  });
+  
