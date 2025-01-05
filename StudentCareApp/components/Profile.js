@@ -14,7 +14,7 @@ export default function Profile() {
              />
            </View> 
 
-           <View style={styles.studentInfoContainer}>
+        <View style={styles.studentInfoContainer}>
           <Image
             style={styles.profilePicContainer}
             source={studentdata.profile_pic}
@@ -23,8 +23,58 @@ export default function Profile() {
           <Text style={styles.studentDetails}>Age:{studentdata.age}</Text>
           <Text style={styles.studentDetails}>Gender:{studentdata.gender}</Text>
         </View>
-        
-         </ScrollView> 
+
+        <View style={styles.contactInfoContainer}>
+          <Text style={styles.contactTitle}>Contact Information</Text>
+          <Text style={styles.contactDetails}>Email: {studentdata.email}</Text>
+          <Text style={styles.contactDetails}>Phone: {studentdata.phone}</Text>
+          <Text style={styles.contactDetails}>
+            Address: {studentdata.address}
+          </Text>
+        </View>
+
+        <Divider></Divider>
+        <View style={styles.biologicalInfoContainer}>
+          <Text style={styles.biologicalTitle}>Biological Information</Text>
+          <Text style={styles.biologicalDetails}>
+            Gender: {studentdata.gender}
+          </Text>
+          <Text style={styles.biologicalDetails}>Age: {studentdata.age}</Text>
+          <Text style={styles.biologicalDetails}>
+            Blood Group: {studentdata.blood_group}
+          </Text>
+        </View>
+
+        <View style={styles.buttonContainer}>
+          <Button
+            mode="contained"
+            onPress={() => {
+              navigate.navigate("profile", { studentdata });
+            }}
+            style={styles.button}
+          >
+            Profile
+          </Button>
+          <Button
+            mode="contained"
+            onPress={() => {
+              navigate.navigate("course");
+            }}
+            style={styles.button}
+          >
+            Course
+          </Button>
+          <Button
+            mode="contained"
+            onPress={() => {
+              navigate.navigate("subjects");
+            }}
+            style={styles.button}
+          >
+            Subjects
+          </Button>
+        </View>
+       </ScrollView> 
       </PaperProvider>
     );
 }
