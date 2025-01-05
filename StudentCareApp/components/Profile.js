@@ -1,6 +1,8 @@
 import { Image, ScrollView, StyleSheet, View } from "react-native";
 import { Button, Divider, PaperProvider, Text, TextInput } from "react-native-paper";
-export default function Profile() {
+export default function Profile({ route }) {
+  const { studentdata } = route.params;
+  const navigate = useNavigation();
     return(
         <PaperProvider>
            <ScrollView>
